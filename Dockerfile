@@ -10,8 +10,8 @@ COPY pubspec.yaml pubspec.yaml
 # Copiez les fichiers restants dans le conteneur
 COPY . .
 
-# Obtenez les dépendances du projet
-RUN flutter pub get && flutter pub get --offline || cat /root/.pub-cache/logs/pub.log
+# Obtenez les dépendances du projet et mettez à niveau les packages
+RUN flutter pub upgrade && flutter pub get
 
 # Nettoyez le cache Flutter
 RUN flutter clean
