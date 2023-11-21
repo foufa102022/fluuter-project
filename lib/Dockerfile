@@ -5,7 +5,7 @@ FROM cirrusci/flutter:2.10.2
 WORKDIR /app
 
 # Copiez le fichier pubspec.yaml séparément pour tirer parti du cache Docker
-COPY pubspec.yaml pubspec.yaml
+COPY ../pubspec.yaml pubspec.yaml
 
 # Copiez les fichiers restants dans le conteneur
 COPY . .
