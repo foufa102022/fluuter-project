@@ -9,12 +9,14 @@ COPY pubspec.yaml pubspec.yaml
 
 # Copiez les fichiers restants dans le conteneur
 COPY . .
+RUN dir lib
 
 # Obtenez les dépendances du projet
 RUN flutter pub get
 
 # Construisez l'application Flutter
 RUN flutter build apk --release
+
 
 # Commande par défaut pour lancer l'application (changez-la selon vos besoins)
 CMD ["flutter", "run"]
