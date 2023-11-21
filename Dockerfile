@@ -9,15 +9,15 @@ COPY pubspec.yaml pubspec.yaml
 
 # Copiez les fichiers restants dans le conteneur
 COPY . .
-RUN dir lib
 
 # Obtenez les dépendances du projet
-RUN flutter pub get
+RUN flutter pub get && flutter pub get --offline || cat /root/.pub-cache/logs/pub.log
+
+# Nettoyez le cache Flutter
+RUN flutter clean
 
 # Construisez l'application Flutter
 RUN flutter build apk --release
 
 # Commande par défaut pour exécuter l'application (changez-la selon vos besoins)
 CMD ["flutter", "run", "--no-sound-null-safety"]
-
-
