@@ -5,10 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                   dir('lib'){
+                  
                     // Construisez l'image Docker
                     bat 'docker build -t flutter_image .'
-                }}
+                }
             }
         }
 
