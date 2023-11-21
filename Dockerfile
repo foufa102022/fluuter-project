@@ -1,5 +1,5 @@
 # Utilisez une image Flutter en tant qu'image de base
-FROM cirrusci/flutter:2.16.1
+FROM mobiledevops/flutter-sdk-image
 
 # Créez un répertoire de travail dans le conteneur
 WORKDIR /app
