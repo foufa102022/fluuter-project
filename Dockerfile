@@ -17,9 +17,7 @@ RUN flutter pub get
 # Construisez l'application Flutter
 RUN flutter build apk --release
 
-
-# Commande par défaut pour lancer l'application (changez-la selon vos besoins)
-CMD ["flutter", "run"]
-
+# Commande par défaut pour exécuter l'application (changez-la selon vos besoins)
+CMD ["flutter", "run", "--no-sound-null-safety"]
 
 
