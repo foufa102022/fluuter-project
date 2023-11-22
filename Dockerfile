@@ -1,5 +1,6 @@
 # Utilisez une image Flutter en tant qu'image de base
-FROM mobiledevops/flutter-sdk-image
+#FROM mobiledevops/flutter-sdk-image
+FROM openpriv/flutter-desktop
 
 # Créez un répertoire de travail dans le conteneur
 WORKDIR /app
