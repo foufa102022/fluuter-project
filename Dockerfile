@@ -9,6 +9,7 @@ COPY pubspec.yaml pubspec.yaml
 
 # Copiez les fichiers restants dans le conteneur
 COPY . .
+RUN flutter -v
 
 # Obtenez les dépendances du projet et mettez à niveau les packages
 RUN flutter pub upgrade && flutter pub get
